@@ -9,14 +9,15 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CepDTO {
+public class EnderecoDTO {
     private String cep;
-    private String tipoCep;
-    private String subTipoCep;
-    private String uf;
-    private String cidade;
-    private String bairro;
-    private String endereco;
+    private String logradouro;
     private String complemento;
-    private String codigoIBGE;
+    private String bairro;
+    private String localidade;
+    private String uf;
+    private String ibge;
+    private String gia;
+    private String ddd;
+    private String siafi;
 }
