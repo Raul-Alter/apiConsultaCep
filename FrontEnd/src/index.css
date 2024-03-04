@@ -5,12 +5,20 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background: rgb(0,34,92);
+  background: linear-gradient(0deg, rgba(0,34,92,1) 27%, rgba(0,94,255,1) 80%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 a {
@@ -26,9 +34,19 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  flex: 1;
 }
+
+#root{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+}
+
 
 h1 {
   font-size: 3.2em;
@@ -66,3 +84,5 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+

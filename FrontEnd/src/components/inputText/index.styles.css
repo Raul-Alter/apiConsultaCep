@@ -1,0 +1,27 @@
+.input-text-container{
+display: flex;
+gap: 16px;
+flex-direction: column;
+width: 100%;
+}
+
+.input-text-container input{
+    height: 48px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    border: 1px solid #ffae00;
+    background-color: #ffae004d;
+    color:#ffae00 ;
+    padding: 8px;
+    
+    }
+
+.input-text-container label{
+    font-size: 24px;
+    color: #ffae00;
+    }
+.input-text-container input::placeholder{
+    font-size: 24px;
+    color: #b17a03;
+    }

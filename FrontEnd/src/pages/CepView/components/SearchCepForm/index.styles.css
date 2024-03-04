@@ -1,0 +1,12 @@
+.cep-form-container{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.search-button{
+    background-color: #ffae00;
+    border-radius: 4px;
+}

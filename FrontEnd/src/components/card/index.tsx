@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-
+import './index.styles.css'
 interface CardProps{
     children:ReactNode;
 }
