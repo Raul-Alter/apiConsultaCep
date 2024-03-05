@@ -6,6 +6,7 @@
     justify-content: center;
     gap: 24px;
     padding: 20px;
+    overflow: hidden;
 }
 .page .content-container{
    width: 100%;

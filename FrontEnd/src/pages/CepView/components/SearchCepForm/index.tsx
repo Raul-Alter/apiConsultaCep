@@ -8,12 +8,15 @@ onSearch:(valueToSearch:string)=>void;
 }
 
 export const SearchCepForm:FC<SearchCepFormProps> = ({onSearch}) => {
-  const {inputData, getFormData} = useForm()
-  
+  const {inputData, getFormData, error} = useForm()
+  console.log(error)
   return (
     <div className='cep-form-container'>
-        <InputText value={inputData} onChange={({target:{value}}:ChangeEvent<HTMLInputElement>) => getFormData(value)}  label='cep'/>
-        <button className='search-button' onClick={()=>onSearch(inputData)}>Concultar cep</button>
+        <InputText value={inputData} onChange={({target:{value}}:ChangeEvent<HTMLInputElement>) => getFormData(value)}  label='Numero do Cep'/>
+        {error && (
+          <span className='error'>{error}</span>
+        )}
+        <button className='search-button' onClick={()=> !error && onSearch(inputData)}>Consultar cep</button>
     </div>
   )
 }

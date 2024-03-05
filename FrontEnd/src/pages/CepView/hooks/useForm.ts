@@ -1,8 +1,19 @@
+import * as Yup from 'yup';
 import { useEffect, useState } from "react"
 
 export const useForm = () => {
     const [inputData, setInputData] = useState("")
     const [error, setError] = useState("")
+
+
+const schema = Yup.object().shape({
+  cep: Yup.string()
+    .matches(/^\d{5}-\d{3}$/, 'CEP inválido, utilize o formato 00000-00') // Formato esperado: XXXXX-XXX
+    .required('CEP é obrigatório'),
+});
+
+
+
 
     const getFormData = (value:string) => {
         setInputData(value)
@@ -10,15 +21,16 @@ export const useForm = () => {
 
     useEffect(() => {
         validateCep(inputData)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [inputData])
     
 
-    const validateCep = (cep:string) =>{
-         const formatoCEP = /^[0-9]{8}$/;
-
-        if(!cep) setError("digite um cep válido")
-
-        if(formatoCEP.test(cep)) setError("digite as caracteres corretamente")
+    const validateCep = async (cep:string) =>{
+    await schema.validate({cep})
+  .then(() => setError(""))
+  .catch(err =>{
+    setError(err.message)
+  });
     }
 
     return {getFormData, inputData, error}
