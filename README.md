@@ -1,6 +1,7 @@
 # Consulta CEP
+O seguinte repósitorio pode se trata de uma API para consulta de CEP, consumindo a API ViaCEP, construido em Java 17 utilizando o framework Spring Boot para o BackEnd e Node 21 utilizando o framework React.js para o FrontEnd.
 
-# Como executar o sistema de consulta de cep
+## Como Executar
 
 ## Preparação do Ambiente
 
